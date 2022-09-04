@@ -1,5 +1,6 @@
 const ErrorHandler = require("../utils/Errorhandler");
 const User = require("../models/User");
+const sendToken = require("../utils/sendToken");
 
 exports.register = async (req, res, next) => {
   const { name, email, password } = await req.body;
@@ -12,16 +13,13 @@ exports.register = async (req, res, next) => {
     });
 
     if (user) {
-      res.status(200).json({
-        success: true,
-        token: "fjasiufyaiufbisaufbisaufyn",
-        user,
-      });
+  
+      sendToken(user,200,res)
     } else {
       return next(new ErrorHandler("User could not be created", 500));
     }
   } catch (error) {
-    console.log(error)
+    console.log(error);
     return next(new ErrorHandler(error.message, error.code));
   }
 };
@@ -36,16 +34,13 @@ exports.login = async (req, res, next) => {
 
     if (!user) {
       return next(new ErrorHandler("Please check your credentials", 500));
-    }
-
-    if (password == user.password) {
-      return res.status(200).json({
-        success: true,
-        token: "fjasiufyaiufbisaufbisaufyn",
-        user,
-      });
     } else {
-      return next(new ErrorHandler("Please check your password", 500));
+      let isMatched = await user.matchPasswords(password);
+      if (!isMatched) {
+        return next(new ErrorHandler("Please check your password", 500));
+      } else {
+            sendToken(user,201,res)
+      }
     }
   } catch (error) {
     return next(new ErrorHandler(error.message, error.code || 500));

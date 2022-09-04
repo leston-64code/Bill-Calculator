@@ -11,6 +11,7 @@ app.use(express.json())
 app.use(cors())
 
 app.use("/api/auth",require("./routes/userRoutes.js"))
+app.use("/user/bill",require("./routes/billRoutes"))
 
 
 app.use(ErrorResponse)
