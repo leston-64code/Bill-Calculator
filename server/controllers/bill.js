@@ -22,7 +22,6 @@ exports.createBill=async (req,res,next)=>{
     }
 }
 
-
 exports.getallbills=async (req,res,next)=>{
    try {
     const userID=await req.header("userID")
@@ -67,6 +66,32 @@ exports.deleteBill=async (req,res,next)=>{
                     success:true,
                     bill
                 })
+            }
+
+        }
+
+    } catch (error) {
+        return next(new ErrorHandler(error,500))
+    }
+}
+
+exports.deleteallBills=async (req,res,next)=>{
+    try {
+        const userID=req.header("userID")
+
+        if(!userID){
+            return next(new ErrorHandler("Please login to perform this action",500))
+        }else{
+            let bill=await Bill.find({userID:userID})
+            const bills=await Bill.deleteMany({userID:userID})
+            let count=bill.length
+            if(!bills){
+                return next(new ErrorHandler("Bills could not be deleted",500))
+            }else{
+              return res.status(200).json({
+                success:true,
+                count
+              })
             }
 
         }
