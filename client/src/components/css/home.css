@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    /* background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%); */
+      
+    /* overflow: hidden; */
+    
+}
+
+.hone{
+    /* position: relative; */
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 49% 99%, 25% 48%, 53% 0);
+    background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    height: 100vh;
+    width: 100vw;
+    animation: height-checker 3s;
+}
+
+@keyframes height-checker {
+    from{
+        height: 0vh;
+    }to{
+        height: 100vh;
+    }
+}
+
+.htwo{
+    /* width: 500px; */
+    align-items: center;
+    text-align: center;
+    height: 590px;
+    position: relative;
+    width: 100vw;
+    top: -620px;
+    /* border: 1px solid red; */
+}
+
+.htwo-h1{
+    display: inline-block;
+    margin: 0;
+    /* border: 1px solid red; */
+    margin-top:10px;
+    font-size: 73px;
+    margin-right: 158px;
+    animation: margin-arranger 4s ;
+    /* animation-delay: 1s; */
+}
+
+@keyframes margin-arranger {
+    from{
+        margin-right: 0px;
+        font-size: 0px;
+    }to{
+        margin-right: 158px;
+        font-size: 73px;
+    }
+}
+
+.htwo-p-one{
+    display: inline-block;
+    margin: 0;  
+    /* border: 1px solid red; */
+    margin-top:10px;
+}
+.htwo-p-one i{
+    font-size: 100px;
+    animation: icon-font-setter 4s;
+    /* animation-delay: 1s; */
+}
+@keyframes icon-font-setter {
+    from{
+        font-size: 0px;
+    }to{
+        font-size: 100px;
+    }
+}
+
+.htwo-p-two{
+    /* border: 1px solid red; */
+    justify-content: center;
+    width: 75vw;
+    margin: auto;
+    font-weight: 400;
+    font-size: 27px;
+    margin-top: 70px;
+    animation: twopara 5s;
+    /* animation-delay: 500ms; */
+  
+}
+
+@keyframes twopara {
+    from{
+        font-size: 0px;
+    }to{
+        font-size: 27px;
+    }
+}
+
+.htwo-p-three i{
+      cursor: pointer;
+      padding: 5px;
+}
+
+.htwo-p-three i:hover{
+    color:white;
+    background-color: black;
+    border-radius: 100px;
+}
+
+.htwo-p-three{
+    font-size: 22px;
+    margin: 0;
+    margin-top: 62px;
+    animation: p-three-changer 5s;
+}
+@keyframes p-three-changer {
+    from{
+        font-size: 0px;
+    }to{
+        font-size: 22px;
+    }
+}
+
+.htwo-p-four{
+    font-size: 18px;
+    animation: p-four-changer 5s;
+}
+@keyframes p-four-changer {
+    from{
+        font-size: 0px;
+    }to{
+        font-size: 18px;
+    }
+}
+
+.htwo-btn{
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+    width: 144px;
+    height: 45px;
+    border-radius: 27px;
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    transition: all 2s;
+    animation: btn-changer 6s;
+}
+@keyframes btn-changer {
+    from{
+        font-size: 0px;
+        width: 0px;
+    }
+    to{
+        font-size: 18px;
+        width: 144px;
+    }
+}
+
+.htwo-btn:hover{
+    background-color:#A9C9FF;
+    color:black
+}

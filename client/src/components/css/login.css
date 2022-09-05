@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    /* background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%); */
+      
+    overflow: hidden;
+    
+}
+
+.dummy{
+  /* position: relative; */
+  /* clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 49% 99%, 25% 48%, 53% 0); */
+  clip-path: polygon(48% 0, 67% 50%, 45% 100%, 0% 100%, 25% 50%, 0% 0%);
+  background-color: #A9C9FF;
+  background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+  height: 100vh;
+  width: 100vw;
+  animation: height-checker 3s;
+}
+
+@keyframes height-checker {
+  from{
+      height: 0vh;
+  }to{
+      height: 100vh;
+  }
+}
+
+
+.one{
+  /* border: 1px solid red; */
+  /* height: 45%; */
+  width: 25%;
+  margin: auto;
+  margin-top: 12%;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: -10px 5px 10px grey;
+ transition: ease-in-out 1s;
+  animation: oneanim 3s;
+  position: relative;
+  top:-600px
+}
+.one:hover{
+  width: 27%;
+  /* height: 320px; */
+}
+
+@keyframes oneanim {
+  from{
+    margin-top: 0%;
+  }to{
+    margin-top: 12%;
+  }
+}
+
+.heading{
+  text-align: center;
+  /* border-bottom: 5px solid red; */
+  border-bottom: 5px solid #FFBBEC;
+  animation: heading1 3s;
+}
+@keyframes heading1 {
+  from{
+    font-size: 0;
+  }to{
+    font-size: 15px;
+    border-width: 100%;
+  }
+}
+.heading h1{
+  /* margin: auto; */
+  /* justify-content: center; */
+  margin-top: 19px;
+  display: inline-block
+}
+
+.input-control{
+  /* border: 2px solid green; */
+ align-items: center;
+ text-align: center;
+}
+.input-common{
+    display: block;
+    margin: auto;
+    /* margin: 0 0 0 0 ; */
+    margin-bottom: 28px;
+    margin-top: 23px;
+    width: 80%;
+    /* height: 5%; */
+    font-family: 'Montserrat', sans-serif;
+    /* border: none; */
+    border: 1px solid grey;
+    /* background: none; */
+    padding: 14px;
+    font-size: 13px;
+    border-radius: 9px;
+    font-weight: 500;
+    
+}
+
+.formbtn{
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+.formbtn-1{
+  border: 1px solid grey;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 0px 0px;
+  margin: 0px 0px;
+  margin-bottom: 19px;
+  padding: 6px 25px 6px 25px;
+  cursor: pointer;
+  width: 335px;
+  height: 40px;
+  transition: ease-in-out 500ms;
+}
+
+.formbtn-1:hover{
+  background-color: #FFBBEC;
+}

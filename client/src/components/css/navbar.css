@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    /* background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%); */
+      
+    overflow: hidden;
+    
+}
+
+
+.nav-one{
+    width: 100%;
+    height: 56px;
+    border-bottom: 5px solid #FFBBEC;
+}
+
+.nav-done{
+    width: 14%;
+    /* background-color: beige; */
+    display: inline-block;
+    overflow: hidden;
+    
+}
+.nav-dtwo{
+ width: 30%;
+ /* background-color: lightpink; */
+ display: inline-block;
+ overflow: hidden;
+}
+.nav-dthree{
+    width: 55%;
+    /* background-color: orange; */
+    display: inline-block;
+    overflow: hidden;
+   
+}
+.nav-common{
+    margin: 0;
+    height: 100%;
+    
+}
+
+.list-one{
+    list-style-type: none;
+    margin: 0;
+    display: inline-block;
+    /* border: 1px solid red; */
+}
+.list-one-comp{
+    display: inline-block;
+    padding: 18px 41px;
+}
+
+.nav-done i{
+    font-size: 39px;
+    margin-left: 22px;
+}
+
+.ponner{
+    /* border: 1px solid red; */
+    margin: 0;
+    margin-top: 5px;
+    display: inline-block;
+    color:black
+}
+
+.tester{
+    width: 100%;
+   
+}
+.ptwo{
+    /* border: 1px solid red; */
+    display: inline-block;
+    margin: 0;
+    margin-top: 5px;
+}
+
+.dthree-one{
+    width: 33%;
+    display: inline-block;
+    /* background-color: yellowgreen; */
+    overflow: hidden;
+    height: 100%;
+}
+
+
+.dthree-one i{
+    font-size: 41px;
+    animation:fontsizechanger 2s ease-in-out infinite
+}
+@keyframes fontsizechanger {
+    from{
+        font-size: 41px;
+    }to{
+        font-size: 45px;
+    }
+}
+
+.lastpara{
+    display: inline-block;
+    /* border: 1px solid red; */
+    margin: 0;
+    margin-top:5px;
+    margin-left: 87px;
+    margin-right: 23px;
+    
+}
+
+.lastpara1{
+    display: inline-block;
+    /* border: 1px solid red; */
+    margin: 0;
+    margin-top:5px;
+    margin-left: 1px;
+    font-size: 19px;
+    overflow: hidden;
+}
+
+.hellone{
+    margin: 0;
+    margin-top: 18px ;
+    display: inline-block;
+    /* border: 1px solid red; */
+    margin-left: 118px;
+    margin-right: 45px;
+}
+.helltwo{
+    margin: 0;
+    margin-top: 18px ;
+    display: inline-block;
+    /* border: 1px solid red; */
+}
+
+Link{
+    text-decoration: none;
+}
+
+.link-one{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 500ms;
+}
+.link-one:hover{
+    text-decoration: underline;
+    font-size: 18px;
+}
