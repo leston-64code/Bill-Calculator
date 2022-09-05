@@ -90,16 +90,17 @@ body{
 
 
 .dthree-one i{
-    font-size: 41px;
-    animation:fontsizechanger 2s ease-in-out infinite
+    font-size: 26px;
+    margin-top: 9px;
+    /* animation:fontsizechanger 2s ease-in-out infinite */
 }
-@keyframes fontsizechanger {
+/* @keyframes fontsizechanger {
     from{
         font-size: 41px;
     }to{
         font-size: 45px;
     }
-}
+} */
 
 .lastpara{
     display: inline-block;
@@ -117,7 +118,7 @@ body{
     margin: 0;
     margin-top:5px;
     margin-left: 1px;
-    font-size: 19px;
+    font-size: 15px;
     overflow: hidden;
 }
 
