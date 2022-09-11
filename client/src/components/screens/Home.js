@@ -1,8 +1,10 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import "../css/home.css"
-import { Link } from 'react-router-dom'
+import { Link ,useNavigate} from 'react-router-dom'
 
 const Navbar = () => {
+  let navigate=useNavigate()
+
   return (
    <>
    

@@ -20,6 +20,23 @@ const userSchema=new mongoose.Schema({
     date:{
         type:Date,
         default:Date.now
+    },
+    companyname:{
+        type:String,
+        required:[true,"Please enter your  company name"],
+    },
+    companyaddress:{
+        required:[true,"Please enter your company address"],
+        type:String
+    },
+    companyphone:{
+        type:Number,
+        required:[true,"please enter company contact number"]
+    },
+    companyemail:{
+        type:String,
+        
+        unique:true
     }
 })
 

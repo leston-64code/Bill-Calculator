@@ -1,11 +1,20 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import "../css/login.css";
 import Appcontext from "../context/Appcontext";
+import { useNavigate} from 'react-router-dom'
 
 const Navbar = () => {
+  let navigate=useNavigate()
   const mainstate = useContext(Appcontext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  useEffect(()=>{
+    if(localStorage.getItem("userID")){
+      navigate(("/private"))
+    }
+  },[])
+
   const submitHandler = async () => {
     fetch("/api/auth/login", {
       method: "POST",
@@ -23,7 +32,14 @@ const Navbar = () => {
       .then((data) => {
         localStorage.setItem("userID", data.user._id);
         localStorage.setItem("name", data.user.name);
+        localStorage.setItem("cname", data.user.companyname);
+        localStorage.setItem("caddress", data.user.companyaddress);
+        localStorage.setItem("cphone", data.user.companyphone);
+        localStorage.setItem("cemail", data.user.companyemail);
         mainstate.setName(data.user.name);
+        setTimeout(()=>{
+          navigate("/private")
+        },1000)
         return;
       })
       .catch((error) => {
@@ -33,7 +49,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="dummy"></div>
+      <div className="dummer"></div>
       <div className="one">
         <div className="heading">
           <h1>Login</h1>

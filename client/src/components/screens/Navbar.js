@@ -1,11 +1,11 @@
 import React, { useContext, useEffect } from "react";
 import "../css/navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import Appcontext from "../context/Appcontext";
 
 const Navbar = () => {
   const mainstate = useContext(Appcontext);
-
+  let navigate=useNavigate()
   useEffect(() => {
     mainstate.setName(localStorage.getItem("name"));
   }, []);
@@ -13,6 +13,11 @@ const Navbar = () => {
   function logoutHandler() {
     localStorage.removeItem("userID");
     localStorage.removeItem("name");
+    localStorage.removeItem("cname")
+    localStorage.removeItem("caddress")
+    localStorage.removeItem("cemail")
+    localStorage.removeItem("cphone")
+    navigate("/")
     mainstate.setName("");
   }
 
